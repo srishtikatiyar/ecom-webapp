@@ -1,0 +1,29 @@
+.mainbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+
+}
+.infoCart{
+    font-size: 1.6rem;
+  padding: 1.5rem;
+  height: 14rem;
+  width: 30rem;
+    
+}
+.inDecQuan{
+    height:4rem;
+    width:4rem;
+   align-self: center;
+}
+.itemImg{
+    height: 12rem;
+    width: 12rem;
+    align-self: center;
+}
+.display{
+    display: flex;
+    flex-direction: column;
+    
+}

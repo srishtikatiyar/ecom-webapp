@@ -1,0 +1,62 @@
+*{
+box-sizing: border-box;
+margin: 0%;
+padding:0% ;
+}
+body{
+    height: 100vh;
+    width:100vw;
+}
+.container{
+    margin-top: 2%;
+    width: 80%;
+    margin: auto;
+background-color: darkgray;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding:2%;
+
+}
+.container:hover{
+    background-color: rgb(118, 113, 113);
+}
+.img{
+    height: 12rem;
+   width:16rem;
+}
+img{
+   height: 13rem;
+   width:16rem;
+   padding: 0%;
+   margin: 0%;
+}
+.info{  
+    background-color: rgb(0, 0, 0);
+   width: 58%;
+    line-height: 2.2rem;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding-left: 4%;
+    font-size: 1.5rem;
+
+}
+.innerBlock{
+    padding-left: 4%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cartImg{
+    width: 6%;
+    height: 6%;
+    opacity: 0.8;
+}
+.cartImg:hover{
+    height: 7%;
+    width: 7%;
+    cursor: pointer;
+
+}

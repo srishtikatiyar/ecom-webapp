@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+.navbar{
+    background-color: black;
+    color: blanchedalmond;
+    font-size: 1.8rem;
+    max-height: 5%;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    list-style: none;
+    justify-content: space-between;
+}
+.navbar li{
+    /* text-decoration: none; */
+    color: yellowgreen;
+    text-decoration: underline;
+}
+
+.navbar li:hover{
+    color: yellow;
+    cursor: pointer;
+}
+.link{
+    color: yellowgreen;
+    /* text-decoration: none; */
+}
+.link:hover{
+    color: yellow;
+}
+    
