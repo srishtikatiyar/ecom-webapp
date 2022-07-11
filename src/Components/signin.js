@@ -3,25 +3,39 @@ import {Component} from 'react';
 import { connect } from 'react-redux';
 import './signin.css';
 
-function signin() {
+function Signin() {
+//   const Submit=()=>{
+//     const formdata=new FormData(document.getElementById('formSignIn'));
+//     console.log(formdata);
+//     localStorage.setItem("username",`${document.getElementById('formSignIn').Username.value}`);
+//     const xhr=new XMLHttpRequest();
+//     xhr.open('POST','http://127.0.0.1:7000/sigin');
+//     xhr.onload=function(event){
+//         console.log(xhr.response);
+//     }
+//     xhr.send(formdata);
+// }
+const func=(e)=>{
+localStorage.setItem("username",e.target.value);
+}
   return (
-    <>   <div class="form shapedividers_com-1909">
-    <form method="post" action="http://127.0.0.1:5000/signin">
+    <>   <div className="form shapedividers_com-1909">
+    <form id="formSignIn" method="post" action="http://127.0.0.1:7000/signin">
         
-        <div class="username">
+        <div className="username">
             <label >Username:</label>
-            <input type="text" name="Username" placeholder="Username"></input>
+            <input type="text" name="Username" placeholder="Username" onChange={func}></input>
     </div>
-    <div class="password">
+    <div className="password">
         <label >Password:</label>
         <input type="password" name="Password" placeholder="Password"></input>
     </div>
-        <button class="button">Submit</button>
+        <button className="button" >Submit</button>
     </form>
 </div>
-<div class="design"></div>
-<div class="second-design"></div></>
+<div className="design"></div>
+<div className="second-design"></div></>
   )
 }
 
-export default signin;
+export default Signin;

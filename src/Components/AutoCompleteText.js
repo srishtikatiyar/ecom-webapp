@@ -1,26 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+// import {Link} from 'react-router-dom'
 // import './AutoCompleteText.css';
+
 class AutoCompleteText extends React.Component{
     constructor(props){
         super(props);
+        console.log("props ",this.props);
+        console.log("func ",this.props.setStateOfParent);
         this.items=[
-           'Women clothing',
-           'Men clothing',
-           'Kids SchoolDress',
-           'Jwellery',
-           'Stationary',
-           'Electronics',
-            'Books',
-            'gadgets',
-            'Women Western-Wear',
-            'Women Indian-Wear',
-            'Cosmetics',
-            'Footwear',
-            'Men Traditional Attire',
-            'Perfumes',
-            'Wristwatch',
-            'Groceries',
-            'Daily-wears',
+           'ClothingWomen',
+           'ClothingMen',
+           'Stationery',
+           'Shoes',
+           'Jwellery'
         ];
         this.state={
             suggestion:[],
@@ -50,17 +43,18 @@ class AutoCompleteText extends React.Component{
         }
         return(
             <ul style={{listStyleType:"none"}}>
-                {suggestion.map((item,index)=><li key={index} style={{cursor:"pointer",color:"black",backgroundColor:"white",position:"relative",zIndex:"2",overflow:"hidden",width:"250px",fontSize:"1rem"}} onClick={()=>this.suggestionSelected(item)}>{item}</li>)}
+                {suggestion.map((item,index)=><li key={index} style={{cursor:"pointer",color:"black",padding:"5px",position:"relative",zIndex:"2",overflow:"hidden",width:"250px",fontSize:"1.2rem"}} onClick={()=>this.suggestionSelected(item)}>{item}</li>)}
             </ul>
         );
     }
+
     render(){
         const {text}=this.state;
         return(
             <div className="AutoCompleteText">
-                <input style={{boxSizing:"border-box",color:"black", width:"250px",height:"30px",fontSize:"1.2rem"}} value={text} onChange={this.onTextChanged} type="text" />
+                <input style={{boxSizing:"border-box",color:"black", width:"280px",height:"30px",fontSize:"1rem",borderRadius:"12px",padding:"10px"}} value={text} onChange={this.onTextChanged} type="text" />
                 {this.renderSuggestions()}
-                <button style={{margin:"4px",width:"50px",fontSize:"0.9rem",backgroundColor:"rgb(197, 226, 139)",cursor:"pointer" }} >search</button>
+                <Link to={text}><button style={{margin:"4px",width:"100px",height:"30px",fontSize:"0.9rem",backgroundColor:"black",color:"white",cursor:"pointer",borderRadius:"4px" }}  >search</button></Link>
             </div>
         );
     }

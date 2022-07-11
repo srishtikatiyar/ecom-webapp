@@ -1,4 +1,24 @@
 .main{
     background-color: darksalmon;
     position:relative;
+    overflow-x: hidden;
+}
+.content{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    margin: 2%;
+    
+}
+.right{
+    width: 75%;
+    border-radius: 12px;
+}
+.left{
+    padding: auto;
+    padding-top: 5%;
+    border-radius: 12px;
+    width: 20%;
+    height: 80%;
+    background-color: aliceblue;
 }

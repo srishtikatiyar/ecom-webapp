@@ -21,6 +21,8 @@
     height: 12rem;
     width: 12rem;
     align-self: center;
+    border-radius: 8px;
+    
 }
 .display{
     display: flex;
